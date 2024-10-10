@@ -1,0 +1,69 @@
+#Nama : Bagas akabr magriban
+#Nim:065002400004
+#Latihan 1
+print("========Selamat Datang di Segitiga Detektor==========")
+
+
+a = int(input("Isi sisi a: "))
+b = int(input("Isi sisi b: "))
+c = int(input("Isi sisi c: "))
+
+
+if a + b > c and a + c > b and b + c > a:
+    
+    if a**2 + b**2 == c**2 or a**2 + c**2 == b**2 or b**2 + c**2 == a**2:
+        print("Jenis segitiga: Segitiga Siku-Siku")
+    
+    elif a == b == c:
+        print("Jenis segitiga: Segitiga Sama Sisi")
+    
+    elif a == b or a == c or b == c:
+        print("Jenis segitiga: Segitiga Sama Kaki")
+    
+    else:
+        print("Jenis segitiga: Segitiga Sembarang")
+else:
+    print("Ini bukan merupakan segitiga")
+
+print("Terimakasih===")
+
+
+#Latihan 2'
+import math
+
+print("===== Selamat Datang di Program Mencari Akar Persamaan Kuadrat dan Determinan =====")
+
+nilai1 = float(input("Masukkan nilai A: "))
+nilai2 = float(input("Masukkan nilai B: "))
+nilai3 = float(input("Masukkan nilai C: "))
+
+if nilai1 == 0:
+    print("Bukan merupakan persamaan kuadrat, karena nilai A = 0")
+else:
+    
+    D = (nilai2 ** 2) - (4 * nilai1 * nilai3)
+    print(f"\nPersamaan kuadrat: {nilai1}x^2 + {nilai2}x + {nilai3}")
+    print(f"Determinan = {D}")
+
+    
+    if D > 0:
+        
+        x1 = (-nilai2 + math.sqrt(D)) / (2 * nilai1)
+        x2 = (-nilai2 - math.sqrt(D)) / (2 * nilai1)
+        print("Memiliki Akar Berbeda")
+        print(f"Akar x1 = {x1}")
+        print(f"Akar x2 = {x2}")
+    
+    elif D == 0:
+        
+        x = -nilai2 / (2 * nilai1)
+        print("Merupakan Akar Kembar")
+        print(f"Akar = {x}")
+    
+    else:
+        
+        real_part = -nilai2 / (2 * nilai1)
+        imag_part = math.sqrt(abs(D)) / (2 * nilai1)
+        print("Merupakan Akar Imaginer")
+        print(f"Akar x1 = {real_part} - {imag_part}i")
+        print(f"Akar x2 = {real_part} + {imag_part}i")
